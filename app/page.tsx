@@ -1,47 +1,34 @@
-import PostCard from './components/PostCard';
-
-// Dados fictícios para os posts
-const posts = [
-  {
-    slug: 'explorando-nextjs-15',
-    title: 'Explorando as Novidades do Next.js 15',
-    summary: 'Uma visão geral sobre as features mais recentes e poderosas do Next.js 15, incluindo o App Router e Server Components.',
-    date: '08 de Setembro de 2025',
-  },
-  {
-    slug: 'guia-de-tailwind-css',
-    title: 'Guia Completo de Tailwind CSS para Iniciantes',
-    summary: 'Aprenda como configurar e utilizar Tailwind CSS para criar designs modernos e responsivos de forma rápida e eficiente.',
-    date: '05 de Setembro de 2025',
-  },
-  {
-    slug: 'server-vs-client-components',
-    title: 'Server vs. Client Components: Entendendo a Diferença',
-    summary: 'Um mergulho profundo nas diferenças fundamentais entre Server e Client Components no ecossistema React e Next.js.',
-    date: '02 de Setembro de 2025',
-  },
-];
+// app/page.tsx
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-4xl font-bold text-center text-cyan-400">
-        Bem-vindo ao Meu Blog
-      </h1>
-      <p className="text-center text-gray-400 text-lg">
-        Artigos sobre desenvolvimento, tecnologia e carreira.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((post) => (
-          <PostCard
-            key={post.slug}
-            slug={post.slug}
-            title={post.title}
-            summary={post.summary}
-            date={post.date}
-          />
-        ))}
+    <div className="flex flex-col items-center justify-center text-center space-y-8 min-h-[70vh]">
+      {/* Coloque uma foto sua na pasta `public` e atualize o caminho abaixo */}
+      <Image
+        src="/sua-foto.jpg" // Ex: /fernando-nunes.jpg
+        alt="Foto de Fernando Nunes"
+        width={150}
+        height={150}
+        className="rounded-full border-4 border-cyan-400 shadow-lg"
+        priority
+      />
+      <div className="max-w-2xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
+          Fernando Nunes
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 mt-4">
+          Desenvolvedor em formação, criativo por natureza e apaixonado por tecnologia.
+        </p>
       </div>
+      <Link
+        href="/about"
+        className="flex items-center gap-2 px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-600 transition-colors"
+      >
+        Conheça Minha História <ArrowRight size={20} />
+      </Link>
     </div>
   );
-};
+}
