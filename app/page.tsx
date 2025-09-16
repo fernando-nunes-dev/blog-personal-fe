@@ -60,10 +60,13 @@ export default function HomePage() {
 
       <section id="experience">
          <h2 className="text-3xl font-bold text-center text-cyan-400 mb-8">Experiência</h2>
-         <div className="bg-gray-800 rounded-lg p-8 max-w-3xl mx-auto shadow-lg space-y-6">
+         <div className="bg-gray-800 rounded-lg text-center p-8 max-w-4xl mx-auto shadow-lg space-y-6">
             <div>
               <h3 className="text-2xl font-semibold text-cyan-300">Comunicação Visual</h3>
               <p className="text-gray-400 text-sm">15 anos de experiência</p>
+               <p className="text-gray-300">
+            Atuação em diversas frentes, incluindo atendimento ao cliente, design, arte-finalização de projetos gráficos e operação de plotters de impressão e recorte.
+          </p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-cyan-300">Motorista de Aplicativo</h3>
@@ -72,6 +75,9 @@ export default function HomePage() {
             <div>
               <h3 className="text-2xl font-semibold text-cyan-300">Voluntariado no TDC Florianópolis 2025</h3>
                <p className="text-gray-400 text-sm">Apoio no evento e networking com a comunidade tech.</p>
+               <p className="text-gray-300">
+            Participei como voluntário, oferecendo apoio na organização do evento. A experiência me proporcionou um contato valioso com a comunidade de tecnologia e um grande aprendizado em networking.
+          </p>
             </div>
          </div>
       </section>

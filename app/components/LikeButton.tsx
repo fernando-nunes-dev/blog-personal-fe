@@ -1,7 +1,7 @@
-'use client'; // Marca este como um Client Component
+'use client';
 
 import { useState } from 'react';
-import { Heart } from 'lucide-react'; // Ícone para o botão
+import { Heart } from 'lucide-react';
 
 export default function LikeButton() {
   const [likes, setLikes] = useState(0);
