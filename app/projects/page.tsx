@@ -1,4 +1,3 @@
-// app/projects/page.tsx
 'use client'; 
 
 import { useState, useEffect } from 'react';
@@ -14,15 +13,13 @@ interface Repo {
   forks_count: number;
 }
 
-// Lista CORRETA e DEFINITIVA com os 11 nomes dos repositórios
 const repoNamesToShow = [
   'gerador-curriculo',
   'jogo-do-numero-secreto',
   'to-do-list',
   'Vanilla-AI-Assistant',
-  'projeto-4-koru',
+  'consultor-de-cep',
   'projeto-eco-ong',
-  'projeto-3',
   'programa-desenvolve-meu-diario',
   'front-end-mentor-projects.github.io',
   'recycle-map-2025',
