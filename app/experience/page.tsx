@@ -14,14 +14,6 @@ export default function ExperiencePage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-cyan-300">Uber</h2>
-          <p className="text-gray-400 text-sm mb-2">2 anos de experiência</p>
-          <p className="text-gray-300">
-            Motorista com classificação Platinum e avaliação de 5 estrelas, focado em oferecer um serviço de excelência e segurança aos passageiros.
-          </p>
-        </div>
-
-        <div>
           <h2 className="text-2xl font-semibold text-cyan-300">Voluntariado - TDC Florianópolis 2025</h2>
           <p className="text-gray-400 text-sm mb-2">Apoio no evento</p>
           <p className="text-gray-300">

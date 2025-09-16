@@ -1,26 +1,5 @@
-// app/projects/page.tsx
 import PostCard from '../components/PostCard';
-
-const projects = [
-  {
-    slug: 'pagina-diario',
-    title: 'Página de Diário Interativa',
-    summary: 'Projeto front-end em HTML semântico e CSS, com layout responsivo utilizando Flexbox/Grid para registrar pensamentos e experiências.',
-    date: 'Entrega: Julho/2025',
-  },
-  {
-    slug: 'exercicios-nodejs',
-    title: 'Exercícios de Node.js',
-    summary: 'Repositório com exercícios de lógica divididos por temas (strings, matemática, condicionais, loops) e organizados com Gitflow.',
-    date: 'Em Andamento',
-  },
-  {
-    slug: 'outros-projetos',
-    title: 'Outros Projetos em Desenvolvimento',
-    summary: 'Protótipos em React com foco em UI/UX e estudos de Cloud para o desenvolvimento de aplicações escaláveis.',
-    date: 'Contínuo',
-  },
-];
+import { projects } from '../../lib/projects';
 
 export default function ProjectsPage() {
   return (
@@ -29,13 +8,13 @@ export default function ProjectsPage() {
         Meus Projetos
       </h1>
       <p className="text-center text-gray-400 text-lg">
-        Aqui estão alguns dos projetos que desenvolvi durante minha jornada de aprendizado.
+        Uma seleção de projetos que demonstram minha jornada e habilidades em desenvolvimento.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {projects.map((project) => (
           <PostCard
             key={project.slug}
-            slug={project.slug}
+            slug={`/projects-details/${project.slug}`}
             title={project.title}
             summary={project.summary}
             date={project.date}
